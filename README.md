@@ -9,7 +9,7 @@ The Home Work has to be delievered before 9AM: ⚠️
 ---
 ### Write a class named 'Student' with with following features:
 
-Privete properties:
+Properties:
 - fName for the student's first name of type String.
 - lName for the student's last name of type String.
 - testScore for the student's test score of type int.
