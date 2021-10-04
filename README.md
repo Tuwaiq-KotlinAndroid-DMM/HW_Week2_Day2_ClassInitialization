@@ -16,9 +16,9 @@ Privete properties:
 
 Initialization:
 - Initializer block which initialize the class properties.
+Or
+- Use secondry constructor to assign properties.
 
-Constructors:
-- Use secondry constructor to assigned properties.
 
 Class functions:
 - addTest() will take name and score as parameters and the score should be between 0 and 100. Then it will return a map item <name,score>, name as key and score as value.
