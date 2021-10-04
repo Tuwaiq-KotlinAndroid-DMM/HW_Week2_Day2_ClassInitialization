@@ -52,6 +52,8 @@ fun main() {
         // print scour the student his search about it
         println("search student : ${student.search(studentSearch!!, map)}")
 
+        println("average is: ${student.average(map)}")
+
         // print hostList
         println(" honList : ${student.honList(map)}")
     }catch (e:Exception){
