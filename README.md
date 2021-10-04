@@ -16,7 +16,7 @@ Privete properties:
 
 Initialization:
 - Initializer block which initialize the class properties.
-Or
+- Or
 - Use secondry constructor to assign properties.
 
 
