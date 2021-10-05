@@ -1,4 +1,4 @@
-class Student(_Fname: String, _Lname: String, _testScore: Int) {
+class student(_Fname: String, _Lname: String, _testScore: Int) {
 
       var Fname: String
             get() = field.capitalize()
@@ -12,7 +12,8 @@ class Student(_Fname: String, _Lname: String, _testScore: Int) {
             Lname = _Lname
             testScore = _testScore
       }
-      fun addTest (name:String , score:Int):  MutableMap <String, Int> {
+
+      fun addTest(name: String, score: Int): MutableMap<String, Int> {
             var map = mutableMapOf<String, Int>()
             if (score >= 0 && score <= 100) {
                   map.put("$name", score)
@@ -21,41 +22,34 @@ class Student(_Fname: String, _Lname: String, _testScore: Int) {
             }
             return map
       }
-      fun display(map: MutableMap<String,Int>){
+
+      fun display(map: MutableMap<String, Int>) {
 
             var students = map.keys.toMutableList()
             var scores = map.values.toMutableList()
             println(students)
             println(scores)
-
-
       }
+}
 
-      fun main (){
-            println("enter how many want: ")
-            var addStudent = readLine()?.toInt()
+fun main (){
+      println("enter how many want: ")
+      var addStudent = readLine()?.toInt()
 
-            println("Enter first name: ")
-            var firstName = readLine()?.toString()
+      println("Enter first name: ")
+      var firstName = readLine()?.toString()
 
-            println("Enter last name: ")
-            var lastName = readLine()?.toString()
+      println("Enter last name: ")
+      var lastName = readLine()?.toString()
 
-            println("Enter the scour: ")
-            var scour = readLine()?.toInt()
+      println("Enter the scour: ")
+      var scour = readLine()?.toInt()
 
-            var fullName = "$firstName $lastName"
+      var fullName = "$firstName $lastName"
 
-            var student = Student(firstName!!, lastName!!, scour!!)
-
-
-            var map = student.addTest(fullName, scour)
-
-      }
+      var student = Student(firstName!!, lastName!!, scour!!)
 
 
-
-
-
+      var map = student.addTest(fullName, scour)
 
 }
