@@ -1,6 +1,10 @@
 
-class Student(var fName:String, var lName:String, var testScore:Int) {
-
+class Student() {
+   var fName:String
+   get() = field.uppercase()
+     var lName:String
+    get() = field.uppercase()
+     var testScore:Int
 init {
     print("Your  first name: ")
     fName = readLine()!!
