@@ -17,20 +17,22 @@ class student  {
         var secondName: String = readLine()!!.toString()
         println("student last name")
         var testScore: Int = readLine()!!.toInt()
-        if (testScore >= 0 && testScore <= 100){
+        if (testScore >= 0 && testScore <= 100) {
             map.put("$firstName", testScore)
         } else {
             println("Enter the score between 0 to 100")
             return addTest()
-            map["${firstName.uppercase()} ${secondName.uppercase()}"]=testScore
+            map["${firstName.uppercase()} ${secondName.uppercase()}"] = testScore
             println("$map")
         }
-     fun displayTests() {
+    }
+         fun displayTests() {
          var students = map.keys.toMutableList()
          var scores = map.values.toMutableList()
          println(students)
          println(scores)
-     }}
+     }
+
     }
 
 
