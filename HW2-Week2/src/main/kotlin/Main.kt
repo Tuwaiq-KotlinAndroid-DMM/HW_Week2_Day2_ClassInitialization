@@ -1,5 +1,13 @@
+
+fun main() {
+    var hala = Student("Hala", "Lama", 0)
+    var ha = hala.displayTests()
+    println(ha)
+}
+
 class Student(var fName:String, var lName:String, var testScore:Int){
     var halamap = mutableMapOf<String,Int>()
+    var input = readLine()!!.toInt()
     init {
         fName = "Hala"
         lName = "Lama"
@@ -30,11 +38,26 @@ class Student(var fName:String, var lName:String, var testScore:Int){
         println(Test())
         println("your list ${halamap.toList()}")
     }
-    }
-}
-fun main(){
-    var hala = Student("Hala","Lama",0)
-    var ha =  hala.displayTests()
-    println(ha)
 
-}
+
+        fun search() {
+            println("write student name with the first and last name Capital letters" +
+                    " to see their result:")
+
+            println(halamap[readLine()!!])
+        }
+
+
+        fun getAvr() {
+            var arg = halamap.values
+            println("the class average is: ${arg.sum() / input}")
+
+        }
+
+        fun honList() {
+            var honorList = mutableListOf<String>()
+           halamap.forEach { y, l ->
+                if (l > 90) {
+                    honorList.add(y) } }
+    }
+}}
