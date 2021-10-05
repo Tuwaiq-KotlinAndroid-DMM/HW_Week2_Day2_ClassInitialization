@@ -30,32 +30,32 @@ class Student(_Fname: String, _Lname: String, _testScore: Int) {
 
 
     }
+}
 
-    fun main (){
-        println("enter how many want: ")
-        var addStudent = readLine()?.toInt()
-
+fun main (){
+    var student:Student
+    var map = mutableMapOf<String,Int>()
+    println("enter how many want: ")
+    var addStudent = readLine()!!.toInt()
+    do {
         println("Enter first name: ")
-        var firstName = readLine()?.toString()
+        var firstName = readLine()!!
 
         println("Enter last name: ")
-        var lastName = readLine()?.toString()
+        var lastName = readLine()!!
 
         println("Enter the scour: ")
-        var scour = readLine()?.toInt()
+        var scour = readLine()!!.toInt()
 
         var fullName = "$firstName $lastName"
 
-        var student = Student(firstName!!, lastName!!, scour!!)
+        student = Student(firstName, lastName, scour)
 
-
-        var map = student.addTest(fullName, scour)
-
-    }
-
-
-
-
+        addStudent--
+        var studentData = student.addTest(fullName, scour)
+        map.put(fullName, scour)
+    } while (addStudent > 0)
+    student.display(map)
 
 
 }
